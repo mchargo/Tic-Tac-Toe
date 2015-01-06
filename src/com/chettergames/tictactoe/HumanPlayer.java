@@ -7,7 +7,8 @@ public class HumanPlayer extends Player
 		super(number, game, board);
 	}
 
-	public void prepareForGame()
+	@Override
+	public void prepareForNewGame()
 	{
 		System.out.print("Player " + number + " name: ");
 		name = Game.scanner.nextLine();
@@ -44,11 +45,20 @@ public class HumanPlayer extends Player
 	}
 
 	@Override
-	public void youWon(String otherPlayer) {}
+	public void youWon(String otherPlayer) 
+	{
+		System.out.println(name + " has won the game!");
+	}
 
 	@Override
-	public void youLost(String otherPlayer) {}
+	public void youLost(String otherPlayer) 
+	{
+		System.out.println(name + " has lost the game!");
+	}
 
 	@Override
-	public void catsGame() {}
+	public void catsGame() 
+	{
+		System.out.println("Cats game!");
+	}
 }
