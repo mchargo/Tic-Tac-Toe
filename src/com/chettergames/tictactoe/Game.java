@@ -8,7 +8,9 @@ public class Game
 	}
 	public void humanVsHuman()
 	{
-	
+		player1 = new HumanPlayer();
+		player2 = new HumanPlayer();
+		board = new Board();
 	}
 	
 	private Player player1;
