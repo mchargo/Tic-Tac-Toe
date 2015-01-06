@@ -33,7 +33,7 @@ public class HumanPlayer extends Player
 			int col = Game.scanner.nextInt();
 			if(game.doMove(row, col)==false)
 			{
-				System.out.print("Invalid move. Please try again");
+				System.out.println("Invalid move. Please try again");
 			}else{
 				moveValid = true;
 			}
