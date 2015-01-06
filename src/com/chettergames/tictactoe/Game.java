@@ -47,7 +47,7 @@ public class Game
 			currentPlayer = player1;
 			
 			player1.myTurn();
-			if(board.catsGame())
+			if(board.gameOver())
 			{
 				player1.catsGame();
 				player2.catsGame();
@@ -61,12 +61,12 @@ public class Game
 			
 			currentPlayer = player2;
 			player2.myTurn();			
-			if(board.catsGame())
+			if(board.gameOver())
 			{
 				player1.catsGame();
 				player2.catsGame();
 				break;
-			}else if(board.gameOver())
+			}else if(board.catsGame())
 			{
 				player2.youWon(player1.getName());
 				player1.youLost(player2.getName());
