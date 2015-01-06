@@ -26,8 +26,10 @@ public class HumanPlayer extends Player
 		{
 			System.out.println("Player " + number + " it is your turn.");
 			System.out.print("Please enter the row you would like to place your piece in? ");
+			while(!Game.scanner.hasNextInt())Game.scanner.nextLine();
 			int row = Game.scanner.nextInt();
 			System.out.print("Please enter the column you would like to place your piece in? ");
+			while(!Game.scanner.hasNextInt())Game.scanner.nextLine();
 			int col = Game.scanner.nextInt();
 			if(game.doMove(row, col)==false)
 			{
