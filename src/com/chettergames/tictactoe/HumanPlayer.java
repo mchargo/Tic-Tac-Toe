@@ -31,4 +31,6 @@ public class HumanPlayer extends Player
 	@Override
 	public void youLost(String otherPlayer) {}
 
+	@Override
+	public void catsGame() {}
 }

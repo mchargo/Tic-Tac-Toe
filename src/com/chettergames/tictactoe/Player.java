@@ -7,6 +7,8 @@ public abstract class Player
 		this.number = number;
 		this.game = game;
 		this.board = board;
+		if(number == 1) piece = new Piece(true);
+		else piece = new Piece(false);
 	}
 	
 	public void prepareForNewGame()
@@ -26,12 +28,15 @@ public abstract class Player
 	
 	public abstract void youWon(String otherPlayer);
 	public abstract void youLost(String otherPlayer);
+	public abstract void catsGame();
 	
 	public String getName(){return name;}
+	public Piece getPiece(){return piece;}
 	
 	protected String name;
 	protected int number;
 	
 	protected Game game;
 	protected Board board;
+	protected Piece piece;
 }

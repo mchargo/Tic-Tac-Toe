@@ -7,6 +7,26 @@ public class Board
 		pieces = new Piece[3][3];
 	}
 	
+	public boolean catsGame()
+	{
+		return false;
+	}
+	
+	public boolean gameOver()
+	{
+		return false;
+	}
+	
+	public void placePiece(int row, int col, Piece piece)
+	{
+		pieces[row][col] = piece;
+	}
+	
+	public Piece getPiece(int row, int col)
+	{
+		return pieces[row][col];
+	}
+	
 	public void printToConsole()
 	{
 		for(int row = 0; row<3; row++)
