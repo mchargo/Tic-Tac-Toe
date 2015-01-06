@@ -24,10 +24,10 @@ public class HumanPlayer extends Player
 		while(moveValid==false)
 		{
 			System.out.println("Player " + number + " it is your turn.");
-			System.out.println("Please enter the row you would like to place your piecein ?");
-			int row = game.scanner.nextInt();
-			System.out.println("Please enter the column you would like to place your piece in?");
-			int col = game.scanner.nextInt();
+			System.out.print("Please enter the row you would like to place your piece in? ");
+			int row = Game.scanner.nextInt();
+			System.out.print("Please enter the column you would like to place your piece in? ");
+			int col = Game.scanner.nextInt();
 			if(game.doMove(row, col)==false)
 			{
 				System.out.print("Invalid move. Please try again");
