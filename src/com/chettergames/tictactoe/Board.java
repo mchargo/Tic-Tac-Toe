@@ -9,7 +9,18 @@ public class Board
 
 	public boolean catsGame()
 	{
-		return false;
+		for(int row=0; row<3; row++)
+		{
+			for(int col=0; col<3; col++)
+			{
+				if(pieces[row][col]==null)
+				{
+					return false;
+				}
+			}
+			
+		}
+		return true;
 	}
 
 	public boolean gameOver()
