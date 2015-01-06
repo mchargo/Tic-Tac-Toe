@@ -6,6 +6,8 @@ public class Game
 {
 	public boolean doMove(int row, int col)
 	{
+		if(row < 0 || row > 2 || col < 0 || col > 2)
+			return false;
 		Piece playerPiece = currentPlayer.getPiece();
 		
 		if(board.getPiece(row, col) == null)
